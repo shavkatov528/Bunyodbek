@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-bottom: 5px solid #ff6347;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    animation: fadeIn .5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateX(-15px) translateY(-15px);}
+    to {opacity: 1; transform: translateX(0) translateY(0);}
+}
+
+header p {
+    font-size: 1.2rem;
+    animation: fadeInP .5s ease-in-out;
+}
+
+@keyframes fadeInP {
+    from {opacity: 0; transform: translateX(15px) translateY(15px);}
+    to {opacity: 1; transform: translateX(0) translateY(0);}
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff6347;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #f53d1c;
+}
+
+.about, .skills, .projects, .contact {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #e0e0e1;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skills ul {
+    list-style: none;
+}
+
+.skills li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.skills li:hover {
+    background-color: hwb(226 59% 11%);
+}
+
+.project {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 2px solid #c5b7b7b5
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact form input,
+.contact form textarea {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form textarea {
+    resize: vertical;
+    height: 10rem;
+}
+
+.contact form button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Chekkadagi tortburchak logo */
+.corner-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  border: 4px solid #ff5c40;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #ff5c40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 3s linear infinite;
+  z-index: 1000;
+}
+
+.corner-logo strong {
+  color: #ff5c40;
+  font-size: 32px;
+  font-family: sans-serif;
+}
+
+/* Animatsiya */
+@keyframes spin {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  33% {
+    transform: rotateX(180deg);
+  }
+  67% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  100% {
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+  }
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid tomato;
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
+  transition: transform 0.3s ease-in-out;
+
+  /* Joylashuv */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
