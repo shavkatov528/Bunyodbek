@@ -1,142 +1,135 @@
+/* === GLOBAL RESET === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
 }
 
+/* === HEADER & FOOTER === */
 header, footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    border-bottom: 5px solid #ff6347;
-    padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  border-bottom: 5px solid #ff6347;
+  padding: 20px;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    animation: fadeIn .5s ease-in-out;
+  font-size: 2.5rem;
+  animation: fadeIn .5s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from {opacity: 0; transform: translateX(-15px) translateY(-15px);}
-    to {opacity: 1; transform: translateX(0) translateY(0);}
+  from {opacity: 0; transform: translateX(-15px) translateY(-15px);}
+  to {opacity: 1; transform: translateX(0) translateY(0);}
 }
 
 header p {
-    font-size: 1.2rem;
-    animation: fadeInP .5s ease-in-out;
+  font-size: 1.2rem;
+  animation: fadeInP .5s ease-in-out;
 }
 
 @keyframes fadeInP {
-    from {opacity: 0; transform: translateX(15px) translateY(15px);}
-    to {opacity: 1; transform: translateX(0) translateY(0);}
+  from {opacity: 0; transform: translateX(15px) translateY(15px);}
+  to {opacity: 1; transform: translateX(0) translateY(0);}
 }
 
+/* === NAVIGATION === */
 nav {
-    margin-top: 20px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2000; /* Linklar ustun bo‘lishi uchun */
 }
 
 nav a {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    background-color: #ff6347;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 0 10px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background-color: #ff6347;
+  padding: 5px 12px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-    background-color: #f53d1c;
+  background-color: #f53d1c;
+  transform: scale(1.05);
 }
 
+/* === MAIN SECTIONS === */
 .about, .skills, .projects, .contact {
-    background-color: #fff;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #e0e0e1;
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #e0e0e1;
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #333;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
 }
 
+/* === SKILLS SECTION === */
 .skills ul {
-    list-style: none;
+  list-style: none;
 }
 
 .skills li {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 5px 0;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: all 0.2s ease-in-out;
 }
 
 .skills li:hover {
-    background-color: hwb(226 59% 11%);
+  background-color: #ffe5de;
+  transform: scale(1.03);
 }
 
+/* === PROJECT SECTION === */
 .project {
-    padding: 20px;
-    background-color: #f4f4f4;
-    margin: 20px 0;
-    border-radius: 10px;
-    border: 2px solid #c5b7b7b5
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 2px solid #ddd;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.contact form input,
-.contact form textarea {
-    display: block;
-    width: 30%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* === CONTACT SECTION === */
+.contact a {
+  color: #ff6347;
+  text-decoration: none;
 }
 
-.contact form textarea {
-    resize: vertical;
-    height: 10rem;
+.contact a:hover {
+  text-decoration: underline;
 }
 
-.contact form button {
-    display: block;
-    padding: 10px 20px;
-    background-color: #ff6347;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-body {
-  margin: 0;
-  background-color: #f4f4f4;
-}
-
-/* Chekkadagi tortburchak logo */
+/* === CORNER LOGO === */
 .corner-logo {
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 20px;
   width: 60px;
@@ -147,8 +140,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: spin 3s linear infinite;
-  z-index: 1000;
+  z-index: 1; /* pastroq qilingan, linklarni to‘smasin */
+  pointer-events: none; /* foydalanuvchi bosolmaydi */
 }
 
 .corner-logo strong {
@@ -157,22 +150,18 @@ body {
   font-family: sans-serif;
 }
 
-/* Animatsiya */
-@keyframes spin {
-  0% {
-    transform: rotateX(0) rotateY(0) rotateZ(0);
-  }
-  33% {
-    transform: rotateX(180deg);
-  }
-  67% {
-    transform: rotateX(180deg) rotateY(180deg);
-  }
-  100% {
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
-  }
+.corner-logo:hover {
+  animation: spin 3s linear infinite;
 }
 
+@keyframes spin {
+  0% { transform: rotateX(0) rotateY(0) rotateZ(0); }
+  33% { transform: rotateX(180deg); }
+  67% { transform: rotateX(180deg) rotateY(180deg); }
+  100% { transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg); }
+}
+
+/* === PROFILE IMAGE === */
 .profile-img {
   width: 150px;
   height: 150px;
@@ -181,14 +170,50 @@ body {
   border: 4px solid tomato;
   box-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
   transition: transform 0.3s ease-in-out;
-
-  /* Joylashuv */
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 1;
+  pointer-events: none; /* Bu ham linklarni to‘smasin */
 }
 
 .profile-img:hover {
   transform: scale(1.1);
+}
+
+/* === FOOTER === */
+footer {
+  border-top: 5px solid #ff6347;
+  margin-top: 40px;
+}
+
+/* === RESPONSIVE DESIGN (MOBIL UCHUN) === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .corner-logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .skills li {
+    font-size: 0.9rem;
+  }
 }
